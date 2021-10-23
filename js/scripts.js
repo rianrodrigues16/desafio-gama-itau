@@ -131,6 +131,7 @@ function verificaEspacoDadosObri(){
 function validarDados()
 {
     var cpf     = document.getElementById('cpf');
+    var estado  = document.getElementById('estado');
     var cep     = document.getElementById('cep');
     var telFix  = document.getElementById('telFixo')
     
@@ -138,11 +139,15 @@ function validarDados()
         alert("CPF não é Valido!");
         cpf.focus();
         return false;
+    }else if (estado.value != "" && estado.value.length != 2) {
+        alert("Estado não informado corretamente!");
+        estado.focus();
+        return false;
     }else if (cep.value != "" && cep.value.length != 9) {
         alert("CEP não informado corretamente!");
         cep.focus();
         return false;
-    }else if(telFixo.value != "" && telFixo.value.length != 13){
+    }else if(telFix.value != "" && telFixo.value.length != 13){
         alert("Telefone Fixo não informado corretamente!");
         telFixo.focus();
         return false;
