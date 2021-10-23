@@ -1,0 +1,163 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to left, #9de3f5, #0a87a7);
+    /*background-color: #9de3f5;*/
+    padding: 25px;
+    font-size: 15px;
+    display: flex;;
+}
+
+.formulario{
+    display: flex;;
+    flex-wrap: wrap; /*Alinhar da maneira que esto adicionando*/
+    margin-right: -29px;
+    margin-left: -9px;
+}
+
+h3{
+    padding-bottom: 10px;;
+}
+
+#conteudo {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: black 1px solid;
+    border-radius: 10px;
+    box-shadow: #2601ac 4px 4px 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    padding-right: 40px;;
+}
+
+#titulo{
+    text-align: center;
+    padding-bottom: 30px;  /*espaço abaixo*/
+}
+
+
+
+/*LAYOUT DAS LABEL'S */
+
+.campoMenor label {
+    margin-bottom: 0.5em; /*Dar espaçamento entre o label e o input*/
+    color: black;
+    font-weight: bold;
+    display: block; /*input ficar um embaixo do outro*/
+}
+
+.campoGrande label {
+    margin-bottom: 0.5em; /*Dar espaçamento entre o label e o input*/
+    color: black;
+    font-weight: bold;
+    display: block; /*input ficar um embaixo do outro*/
+    width: 500px;
+}
+
+.campoMedio label {
+    margin-bottom: 0.5em; /*Dar espaçamento entre o label e o input*/
+    color: black;
+    font-weight: bold;
+    display: block; /*input ficar um embaixo do outro*/
+}
+
+.campoSexo{
+    display: block;
+    float:  left;    
+    margin-left:-7%;
+    padding-bottom: 1em;  
+    margin-top: 20px;  
+    margin-right: 1em;
+    padding-bottom: 1em;
+}
+
+/*LAYOUT DOS INPUT'S*/
+
+.campoMenor input[type="text"]{    
+    border: 1px solid black;
+    box-shadow: #2601ac  2px 2px 2px ;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 1em;
+    outline: none;
+    width: 110px;
+}
+
+.campoMenor input[type="date"]{    
+    border: 1px solid black;
+    box-shadow: #2601ac  2px 2px 2px ;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;    
+    outline: none;
+    width: 140px;
+    margin-bottom: 1em;
+}
+
+.campoGrande input[type="text"] {    
+    border: 1px solid black;
+    box-shadow: #2601ac  2px 2px 2px ;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    width: 500px;
+    margin-bottom: 1em;
+}
+
+.campoMedio input[type="text"] {    
+    border: 1px solid black;
+    box-shadow: #2601ac  2px 2px 2px ;
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    width: 207px;
+    margin-bottom: 1em;
+}
+
+/*AO SELECIONAR MUDARA DE COR*/
+.campoMenor input:focus, 
+.campoGrande input:focus, 
+.campoMedio input:focus {
+    box-shadow: #d81313  2px 2px 2px ;
+}
+
+/*Ordenação dos Campos no Forms*/
+.grupo .campoMenor{
+    float:  left;
+    margin-right: 1em;
+}
+
+.grupo .campoMedio{
+    float:  left;
+    margin-right: 1em;
+}
+
+
+/*LAYOUT DO BOTÃO */
+.botao{
+    text-transform: uppercase;
+    width: 400px;
+    height: 40px;    
+    background: linear-gradient(to left, #4457ff, #2601ac);
+    color: #eee;
+    border-radius: 5px;
+    border: none;
+    box-shadow: black 1px 1px 1px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.botao:hover {
+    background: linear-gradient(to left, #2601ac, #4457ff);
+}
+.botao, select{
+    cursor: pointer;
+}
