@@ -12,6 +12,18 @@ function pegaSomenteNumero(evt) {
     }
  }
 
+ function pegaSomenteLetra(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+
+    key = String.fromCharCode( key );
+
+    var regex = /^([a-zA-Zà-úÀ-Ú-']|\s+)+$/;
+    if( !regex.test(key) ) {
+       theEvent.returnValue = false;
+       if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+}
 function mascara_cpf(){
     var cpf = document.getElementById('cpf');
 
@@ -66,7 +78,7 @@ submit.addEventListener('click', function(e) {
     if(validadoDadosObrigatorios()){
         if(verificaEspacoDadosObri()){
             if(validarDados()){
-                alert( nome.value.toUpperCase +"\n SEU CADASTRO FOI SALVO COM SUCESSO");
+                alert( nome.value.toUpperCase() +"\nSEU CADASTRO FOI ENVIADO COM SUCESSO");
             }else{
                 e.preventDefault();
             }

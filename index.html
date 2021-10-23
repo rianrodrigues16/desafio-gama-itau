@@ -12,6 +12,9 @@
         <!--Java script-->
         <script src="js/scripts.js"></script>
 
+        <!--Icone do Site-->
+        <link rel="shortcut icon" type="imagex/png" href="imagem/image.ico">
+
         <!--Titulo da Página-->
         <title>Cadastro</title>
     </head>
@@ -29,12 +32,12 @@
                     <h3>Dados Pessoais </h3>
                     <div class="campoGrande">
                         <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome" minlength="3" placeholder="Digite o Nome*" autocomplete="off" required>
+                        <input type="text" name="nome" id="nome" minlength="3" placeholder="Digite o seu Nome Completo*" autocomplete="off" onkeypress="pegaSomenteLetra()" required>
                     </div>
 
                     <div class="campoMenor">
                         <label for="dtNasc">Data de Nascimento</label>
-                        <input type="date" name="dtNasc" id="dtNasc" placeholder="">
+                        <input type="date" name="dtNasc" id="dtNasc" >
                     </div>
 
                     <div class="campoMenor">
@@ -46,7 +49,7 @@
 
                     <div class="campoMenor">
                         <label for="rg">RG</label>
-                        <input type="text" name="rg" id="rg" placeholder="Digite seu RG">
+                        <input type="text" name="rg" id="rg" placeholder="Digite o seu RG" onkeypress="pegaSomenteNumero()" autocomplete="off">
                     </div>
                     
                     <div class="campoSexo">
@@ -61,37 +64,37 @@
                     <h3>Endereço</h3>
                     <div class="campoGrande">
                         <label for="logradouro">Logradouro</label>
-                        <input type="text" name="logradouro" id="logradouro" minlength="3" placeholder="Digite o Endereço/Logradouro*" required>
+                        <input type="text" name="logradouro" id="logradouro" minlength="3" placeholder="Digite o Endereço/Logradouro*" autocomplete="off" required>
                     </div>
 
                     <div class="campoMenor">
                         <label for="numero">Número</label>
-                        <input type="text" name="numero" id="numero" placeholder="000*" onkeypress="pegaSomenteNumero()" required>
+                        <input type="text" name="numero" id="numero" placeholder="000*" onkeypress="pegaSomenteNumero()" autocomplete="off" required>
                     </div>
 
                     <div class="campoMedio">
                         <label for="numero">Complemento</label>
-                        <input type="text" name="complemento" id="complemento" placeholder="Digite o Complemento">
+                        <input type="text" name="complemento" id="complemento" placeholder="Casa/Apartamento" autocomplete="off">
                     </div>
                     
                     <div class="campoMenor" >
                         <label for="bairro">Bairro</label>
-                        <input type="text" name="bairro" id="bairro" placeholder="Digite o Bairro">
+                        <input type="text" name="bairro" id="bairro" placeholder="Digite o Bairro" autocomplete="off">
                     </div>
 
                     <div class="campoMedio" >
                         <label for="cidade">Cidade</label>
-                        <input type="text" name="cidade" id="cidade" placeholder="Digite a Cidade">     
+                        <input type="text" name="cidade" id="cidade" placeholder="Digite a Cidade" autocomplete="off">     
                     </div>
 
                     <div class="campoMenor" >
                         <label for="estado">Estado</label>
-                        <input type="text" name="estado" id="estado" placeholder="(RJ,SP)" maxlength="2">
+                        <input type="text" name="estado" id="estado" placeholder="RJ,SP" maxlength="2" autocomplete="off" style="text-transform:uppercase" onkeypress="pegaSomenteLetra()">
                     </div>
 
                     <div class="campoMenor">
                         <label for="cep">CEP</label>
-                        <input type="text" name="cep" id="cep" maxlength="9" placeholder="00000-000" onkeypress="(pegaSomenteNumero(),mascara_cep())" >
+                        <input type="text" name="cep" id="cep" maxlength="9" placeholder="00000-000" onkeypress="(pegaSomenteNumero(),mascara_cep())" autocomplete="off">
                     </div>
                 </div>               
                                 
@@ -99,11 +102,11 @@
                     <h3>Contato</h3>
                     <div class="campoMenor">
                         <label for="telFixo">Telefone Fixo</label>
-                        <input type="text" name="telFixo" id="telFixo" maxlength="13" placeholder="(xx)xxxx-xxxx" onkeypress="(pegaSomenteNumero(),mascara_telFixo())">
+                        <input type="text" name="telFixo" id="telFixo" maxlength="13" placeholder="(xx)xxxx-xxxx" onkeypress="(pegaSomenteNumero(),mascara_telFixo())" autocomplete="off">
                     </div>
                     <div class="campoMenor" >
                         <label for="telCelular">Telefone Celular</label>
-                        <input type="text" name="telCelular" id="telCelular" minlength="14" maxlength="14" placeholder="(xx)xxxxx-xxxx *" onkeypress="(pegaSomenteNumero(),mascara_telCelular())" required>
+                        <input type="text" name="telCelular" id="telCelular" minlength="14" maxlength="14" placeholder="(xx)xxxxx-xxxx *" onkeypress="(pegaSomenteNumero(),mascara_telCelular())" autocomplete="off" required>
                     </div>
                </div>
                
@@ -112,6 +115,7 @@
         </div>
 
         <script src="js/scripts.js"></script>
+        
     </body>    
 
 </html>
